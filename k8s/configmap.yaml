@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+  namespace: production
+data:
+  NODE_ENV: "production"
+  PORT_USER_SERVICE: "3001"
+  PORT_PRODUCT_SERVICE: "3002"
+  DB_PORT: "5432"
+  DB_USER: "postgres"
+  USERS_DB_NAME: "users_db"
+  PRODUCTS_DB_NAME: "products_db"
+  USERS_DB_HOST: "microservices-app-users-db.cl8yace06n2y.ca-central-1.rds.amazonaws.com"
+  PRODUCTS_DB_HOST: "microservices-app-products-db.cl8yace06n2y.ca-central-1.rds.amazonaws.com"
+  USER_SERVICE_URL: "http://user-service:3001"
