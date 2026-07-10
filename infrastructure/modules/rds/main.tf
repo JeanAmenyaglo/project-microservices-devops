@@ -49,7 +49,7 @@ resource "aws_security_group" "rds" {
 resource "aws_db_instance" "users" {
   identifier        = "${var.project_name}-users-db"
   engine            = "postgres"
-  engine_version    = "16.1"
+  engine_version    = "16.9"
   instance_class    = var.db_instance_class
   allocated_storage = 20
   storage_type      = "gp3"
@@ -76,7 +76,7 @@ resource "aws_db_instance" "users" {
 resource "aws_db_instance" "products" {
   identifier        = "${var.project_name}-products-db"
   engine            = "postgres"
-  engine_version    = "16.1"
+  engine_version    = "16.9"
   instance_class    = var.db_instance_class
   allocated_storage = 20
   storage_type      = "gp3"
