@@ -18,7 +18,7 @@ terraform {
     bucket         = "microservices-terraform-state-jean"
     key            = "production/terraform.tfstate"
     region         = "ca-central-1"
-    dynamodb_table = "terraform-state-locks"
+    use_lockfile   = true
     encrypt        = true
   }
 }
