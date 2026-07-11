@@ -111,8 +111,8 @@ services:
       dockerfile: Dockerfile
       target: production
       args:
-        VITE_USER_SERVICE_URL: http://localhost:3001
-        VITE_PRODUCT_SERVICE_URL: http://localhost:3002
+        VITE_USER_SERVICE_URL: http://user-service:3001
+        VITE_PRODUCT_SERVICE_URL: http://product-service:3002
     container_name: frontend
     restart: unless-stopped
     ports:

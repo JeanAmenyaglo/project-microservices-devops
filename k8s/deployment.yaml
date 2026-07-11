@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
         - name: user-service
-          image: 408433988572.dkr.ecr.ca-central-1.amazonaws.com/microservices-app-user-service:v2
+          image: 408433988572.dkr.ecr.ca-central-1.amazonaws.com/microservices-app-user-service:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 3001
@@ -111,7 +111,7 @@ spec:
     spec:
       containers:
         - name: product-service
-          image: 408433988572.dkr.ecr.ca-central-1.amazonaws.com/microservices-app-product-service:v2
+          image: 408433988572.dkr.ecr.ca-central-1.amazonaws.com/microservices-app-product-service:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 3002
