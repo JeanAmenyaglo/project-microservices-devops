@@ -111,7 +111,10 @@ jobs:
         run: |
           kubectl apply -f k8s/namespace.yaml
           kubectl apply -f k8s/configmap.yaml
-          kubectl apply -f k8s/secret.yaml
+          kubectl create secret generic app-secrets \
+            --from-literal=DB_PASSWORD=${{ secrets.DB_PASSWORD }} \
+            --namespace=production \
+            --dry-run=client -o yaml | kubectl apply -f -
           kubectl apply -f k8s/deployment.yaml
           kubectl apply -f k8s/service.yaml
           kubectl apply -f k8s/hpa.yaml
