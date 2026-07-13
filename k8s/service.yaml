@@ -37,7 +37,7 @@ metadata:
   name: frontend
   namespace: production
   annotations:
-    service.beta.kubernetes.io/aws-load-balancer-subnets: "subnet-0c56fb5af11be6980,subnet-02f31986f866d4d44"
+    service.beta.kubernetes.io/aws-load-balancer-subnets: "subnet-090e5720aef1616a2,subnet-0b6f23a2330240879"
     service.beta.kubernetes.io/aws-load-balancer-scheme: "internet-facing"
 spec:
   selector:
