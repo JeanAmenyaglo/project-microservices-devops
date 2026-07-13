@@ -78,6 +78,30 @@ jobs:
             ./frontend
           docker push ${{ secrets.ECR_FRONTEND }}:${{ steps.tag.outputs.tag }}
 
+      - name: Scan user-service image with Trivy
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: ${{ secrets.ECR_USER_SERVICE }}:${{ steps.tag.outputs.tag }}
+          format: table
+          exit-code: 0
+          severity: HIGH,CRITICAL
+
+      - name: Scan product-service image with Trivy
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: ${{ secrets.ECR_PRODUCT_SERVICE }}:${{ steps.tag.outputs.tag }}
+          format: table
+          exit-code: 0
+          severity: HIGH,CRITICAL
+
+      - name: Scan frontend image with Trivy
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: ${{ secrets.ECR_FRONTEND }}:${{ steps.tag.outputs.tag }}
+          format: table
+          exit-code: 0
+          severity: HIGH,CRITICAL
+
   deploy:
     name: Deploy to EKS
     runs-on: ubuntu-latest
