@@ -208,4 +208,5 @@ Open `http://localhost:3001` (admin/admin123)
 Jean Amenyaglo  
 Software Development Student — NAIT (graduating April 2027)  
 Master's in Digital Transformation and Innovation — University of Ottawa
+
 LinkedIn: [linkedin.com/in/jeanamenyaglo](https://linkedin.com/in/jeanamenyaglo)
